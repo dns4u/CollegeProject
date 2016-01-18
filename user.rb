@@ -102,14 +102,25 @@ post '/update' do
   email_result.each do|email|
     group_email= GroupEmployee.first(:employee_id=>(email.id),:group_id=>session['gid'])
     if(group_email!=nil)
-      test=1;
+      test=1
       @employee_register=email
       break
     end
   end
+  if("#{params[:email]}"!="#{params[:user]}")
+  email_test=Employee.all(:email=>"#{params[:user]}")
+  email_test.each do|email|
+    group_email= GroupEmployee.first(:employee_id=>(email.id),:group_id=>session['gid'])
+    if(group_email!=nil)
+      test=0
+      break;
+    end
+  end
+end
   if(test==0)
-    erb:groupFail
+    erb:updateFail
   else
+   
     email_update=Employee.first(:email=>@employee_register.email)
     email_update.update(:first_name => "#{params[:first_name]}",:last_name => "#{params[:last_name]}",:email => "#{params[:user]}",:mobile_number => "#{params[:mobile_number]}",:address => "#{params[:address]}",:password => "#{params[:password]}")
      email_result=Employee.all(:email=>"#{params[:user]}")

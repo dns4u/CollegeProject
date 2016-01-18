@@ -13,6 +13,7 @@ class Employee
   property :group_name, String
   property :id, Serial
   property :first_name, String
+  property :middle_name, String
   property :last_name, String
   property :gender, String
   property :address, String

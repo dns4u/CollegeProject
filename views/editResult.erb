@@ -45,7 +45,7 @@
        <center><h1>Member Information  Form</h1></center>
       <form name="editform" method="post" action="/edit" onsubmit="return required()">
         <label> User Name</label>
-        <input type="text" name="email" id="email" value="<%=@email%>" onkeypress="return onlyAlphabets(event,this);">
+        <input type="text" name="email" id="email" value="<%=@email%>">
           <input type="submit" value="Search">
      </form>
    <%if(@test==1) %>
@@ -54,6 +54,11 @@
         <label>First Name</label>
         <input type="text" name="first_name" id="firstname" onkeypress="return onlyAlphabets(event,this);" value="<%=@employee_register.first_name%>">
         <br>
+        <%if(@employee_register.middle_name!=nil) %>
+        <label>Middle Name</label>
+        <input type="text" name="middle_name" id="middlename" onkeypress="return onlyAlphabets(event,this);" value="<%=@employee_register.middle_name%>">
+        <br>
+        <%end%>
         <label>Last Name</label>
         <input type="text" name="last_name" id="lastname" onkeypress="
         return onlyAlphabets(event,this);"value="<%=@employee_register.last_name%>"><br>
@@ -74,7 +79,7 @@
         </div>
       </form>   
       <%else%>
-      <h3>Sorry <h1><%=@email%><h1> doesn't exist in your group</h3>
+      <center><h3>Sorry <h1><%=@email%><h1> doesn't exist in your group</h3></center>
   
      <%end%>
 

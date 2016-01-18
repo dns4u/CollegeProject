@@ -29,7 +29,7 @@
             <li><a id="book" href="/edit"> <i class="fa fa-edit" style="color:#309744;"></i>&nbsp; Edit</a></li>
             <li><a id="book" href="/delete"> <i class="fa fa-trash" style="color:#459755;"></i>&nbsp; Delete </a></li>
             <li><a id="sign" href="/"> <i class="fa fa-sign-out " style="color:#0091b3;"></i>&nbsp; Logout</a></li>
-            <li><a id="sign" href="/list"> <i class="fa fa-list-alt " style="color:#0091b3;"></i>&nbsp; List</a></li>
+            <li><a id="sign" href="/list"> <i class="fa fa-sign-out " style="color:#0091b3;"></i>&nbsp; List</a></li>
           </ul>
           
         </nav>
@@ -42,25 +42,46 @@
     </div>
   <div id="search-item">
         <ul>
-      <center><h1>Information of member registered in this Group are</h1></center>
-    
-      <%check=0%>
-      <table class="list">
-      <tr><td>First name</td><td>Last Name</td><td>User Name</td><td>address</td><td>Mobile Number</td><td>Gender</td></tr>
-    <% @group_list.each do |group|%>
-      <% @employee_list.each do |employee| %>
-         <%if(group.employee_id == employee.id)%>
-         <tr><td><%=employee.first_name%></td><td><%=employee.last_name%></td><td><%=employee.email%></td><td><%=employee.address%></td><td><%=employee.mobile_number%></td><td><%=employee.gender%></td></tr>
-         <%check=1%>
-         <%end%>
-      <%end%>
-    <%end%>
-  </table>
-       <%if(check==0)%>
-         <h1>No member register in this group </h1>
-      <%end%>
-     
-   </ul>
+      <center><h3>User Name Already register.Please Use another user name </h3></center>
+
+      <center><h1>Member Information  Form</h1></center>
+      <form name="editform" method="post" action="/edit" onsubmit="return required()">
+        <label> User Name</label>
+        <input type="text" name="email" id="email" value="<%=@email%>">
+          <input type="submit" value="Search">
+     </form>
+     <center> <h3>Details of <%=@employee_register.email%></h3></center>
+      <form name="editform" method="post" action="/update" class="  registrationform" onsubmit="return required()">
+        <label>First Name</label>
+        <input type="text" name="first_name" id="firstname" onkeypress="return onlyAlphabets(event,this);" value="<%=@employee_register.first_name%>">
+        <br>
+        <%if(@employee_register.middle_name!=nil) %>
+        <label>Middle Name</label>
+        <input type="text" name="middle_name" id="middlename" onkeypress="return onlyAlphabets(event,this);" value="<%=@employee_register.middle_name%>">
+        <br>
+        <%end%>
+        <label>Last Name</label>
+        <input type="text" name="last_name" id="lastname" onkeypress="
+        return onlyAlphabets(event,this);"value="<%=@employee_register.last_name%>"><br>
+        <label>User Name</label>
+        <input type="hidden" name="email" id="email" onkeypress="" value="<%=@employee_register.email%>">
+        <input type="text" name="user" id="user" onkeypress="" value="<%=@employee_register.email%>"><br>
+        <label>Address</label>   
+        <input type="text" name="address" id="address" value="<%=@employee_register.address%>"><br>
+         <label>Mobile Number</label>
+        <input type="number" name="mobile_number" id="mobilenumber" onkeypress="return onlyNumber(event,this);" value="<%=@employee_register.mobile_number%>"><br>
+        <label>Password</label>
+        <input type="password" name="password" id="password" value="<%=@employee_register.password%>"><br>
+        <label>Conform Password</label>
+        <input type="password" name="cpassword" id="password" value="<%=@employee_register.password%>"><br>
+        <div class="button">
+          <input type="submit" value="Update">
+          <input type="reset" value="Clear">
+        </div>
+      </form>   
+
+      
+         </ul>
         
       </div>
     </div>

@@ -1,0 +1,6 @@
+development:
+  adapter: mysql
+  database: usershare
+  username: <%= ENV['root'] %>
+  password: <%= ENV['dinesh 770'] %>
+  host: localhost

@@ -96,9 +96,27 @@ body {
 			margin-left: 160px;
 			margin-top: 10px;
 			text-align: left;
-
-
-		}
+			}
+		.result{
+			vertical-align:middle;
+			position: relative;
+			left: 300px;
+			top:10px;
+			text-align: left;
+				}
+		.list{
+			vertical-align:middle;
+			position: relative;
+			left: 50px;
+			top:10px;
+			text-align: left;
+			border-spacing: 10px;
+				}
+			.result td,.list td{
+				padding: 10px;
+				font-size: 25px;
+				
+			}
 		td{
 			padding: 4px;
 		}
@@ -1285,7 +1303,6 @@ color:#F5F5F5;
 	width:100px;
 	position:relative;
 	left:500px;
-	z-index: 10;
  }
 .share h1{
 	
