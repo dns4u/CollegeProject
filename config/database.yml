@@ -1,5 +1,5 @@
 development:
-  adapter: mysql
+  adapter: mysql2
   database: usershare
   username: <%= ENV['root'] %>
   password: <%= ENV['dinesh 770'] %>

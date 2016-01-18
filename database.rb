@@ -1,3 +1,4 @@
+require "rubygems"
 require 'mysql2'
 begin
   con = Mysql.new 'localhost', 'root', 'dinesh 770'
