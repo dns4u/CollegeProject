@@ -1,3 +1,3 @@
 # config.ru
-require './index' 
-run Sinatra::Application
+ require './index' 
+ run Sinatra::Application
