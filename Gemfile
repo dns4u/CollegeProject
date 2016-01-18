@@ -4,3 +4,4 @@ gem "pry-nav"
 gem "dm-paperclip"
 gem 'data_mapper'
 gem 'sinatra'
+gem 'mysql'
