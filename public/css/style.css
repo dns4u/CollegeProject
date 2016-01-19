@@ -209,6 +209,21 @@ body {
 							color:#FFFF99;
 						}
 						
+						#header nav > ul > li a#add:hover{
+							color:#e45230;
+						}
+						#header nav > ul > li a#edit:hover{
+							color:#309744;
+						}
+						#header nav > ul > li a#delete:hover{
+							color:#a59755;
+						}
+						#header nav > ul > li a#logout:hover{
+							color:#0091b3;
+						}
+						#header nav > ul > li a#list:hover{
+							color:#f091b3;;
+						}
 						
 
 					#header nav > ul > li:first-child {
