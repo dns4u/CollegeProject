@@ -22,9 +22,9 @@ mysql_data_source: &pii
   hostname: localhost
   port: 3306
   socket: /tmp/mysqld.sock
-  username: username
-  password: default
-  database: awesome_possum
+  username: root
+  password: dinesh 770
+  database: usershare
 
 mysql2psql:
   mysql:
