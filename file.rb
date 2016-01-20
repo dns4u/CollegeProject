@@ -1,6 +1,7 @@
 require "bundler/setup"
 require 'sinatra'
 require 'data_mapper'
+require './model.rb'
 require 'dm-core'
 require 'dm-paperclip'
 def make_paperclip_mash(file_hash)
