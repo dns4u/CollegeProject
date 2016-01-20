@@ -1,6 +1,5 @@
 require "bundler/setup"
 require 'sinatra'
-require './database.rb'
 require 'data_mapper'
 require './model.rb'
 require 'dm-core'

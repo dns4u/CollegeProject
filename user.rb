@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
-require './database.rb'
 require './model.rb'
 require 'data_mapper'
 require 'dm-core'
