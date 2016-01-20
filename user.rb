@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
-require './model.rb'
 require 'data_mapper'
 require 'dm-core'
 enable :sessions
