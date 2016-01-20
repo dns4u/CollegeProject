@@ -6,3 +6,8 @@ gem 'data_mapper'
 gem 'sinatra'
 gem "mysql"
 gem "dm-mysql-adapter"
+gem "pg"
+gem 'dm-postgres-adapter'
+
+
+
