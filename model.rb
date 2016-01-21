@@ -109,4 +109,5 @@ class EmployeeShareText
 end
 
 DataMapper.finalize 
+DataMapper.auto_upgrade!
 
