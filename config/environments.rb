@@ -4,8 +4,8 @@ configure :production, :usershare do
 
 
 dm = DataMapper.setup :usershare, {
-:adapter => 'mysql2',
-:username => 'root',
+:adapter => 'postgres',
+:username => 'postgres',
 :password => 'dinesh 770',
 :host => 'localhost'
 }
