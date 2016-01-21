@@ -1,5 +1,5 @@
 development:
-  adapter: postgresql
+  adapter: postgres
   database: usershare
   username: postgres
   password: dinesh 770
