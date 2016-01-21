@@ -4,7 +4,7 @@ require 'dm-core'
 require 'dm-paperclip'
 APP_ROOT = File.expand_path(File.dirname(__FILE__))
 
-DataMapper.setup(:default,"postgres://postgres:dinesh 770@localhost/usershare")
+DataMapper.setup(:default, ENV['DATABASE_URL'] ||"postgres://postgres:dinesh 770@localhost/usershare")
 
 class Employee
   include DataMapper::Resource
